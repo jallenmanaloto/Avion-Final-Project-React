@@ -13,8 +13,7 @@ const Headlines = () => {
   useEffect(() => {
     axios({
       method: "GET",
-      //   url: "https://newsapi.org/v2/top-headlines?country=ph&category=health&apiKey=3fb6128935d7419c844a591469e9c2f1",
-      url: "http://localhost:3000",
+      url: "https://newsapi.org/v2/top-headlines?country=ph&category=health&apiKey=3fb6128935d7419c844a591469e9c2f1",
     })
       .then((res) => {
         setHeadline(res.data.articles);
@@ -23,42 +22,40 @@ const Headlines = () => {
   }, []);
 
   //layout for mapped articles from api
-  const articles = ( //headline.map((article) => {
-    //  return (
-    <Grid item lg={10}>
-      <Paper sx={{ mt: 3, mb: 3 }}>
-        <Typography sx={{ p: 3, color: "#4d4d4d", width: "90%" }} variant="h5">
-          {/* {article.title} */}
-          TITLE
-        </Typography>
-        <Typography
-          sx={{ pl: 3, color: "#4d4d4d", width: "90%" }}
-          variant="body1"
-        >
-          {/* {article.description} */}
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint hic eos
-          nisi sunt voluptates eum! Dolores dicta quae modi accusamus aut
-          voluptates adipisci explicabo quaerat incidunt, accusantium similique
-          reiciendis.
-        </Typography>
-        {/* <a href={article.url}> */}
-        <img
-          style={{
-            marginLeft: "50%",
-            marginBottom: "1rem",
-            paddingTop: "2rem",
-            width: "90%",
-            objectFit: "cover",
-            transform: "translateX(-50%)",
-          }}
-          src="https://i.ytimg.com/vi/Qn3twxXLVfE/hqdefault.jpg"
-          alt="news-image"
-        />
-        {/* </a> */}
-      </Paper>
-    </Grid>
-  );
-  // });
+  const articles = headline.map((article) => {
+    return (
+      <Grid item lg={10}>
+        <Paper sx={{ mt: 3, mb: 3 }}>
+          <Typography
+            sx={{ p: 3, color: "#4d4d4d", width: "90%" }}
+            variant="h5"
+          >
+            {article.title}
+          </Typography>
+          <Typography
+            sx={{ pl: 3, color: "#4d4d4d", width: "90%" }}
+            variant="body1"
+          >
+            {article.description}
+          </Typography>
+          <a href={article.url}>
+            <img
+              style={{
+                marginLeft: "50%",
+                marginBottom: "1rem",
+                paddingTop: "2rem",
+                width: "90%",
+                objectFit: "cover",
+                transform: "translateX(-50%)",
+              }}
+              src="https://i.ytimg.com/vi/Qn3twxXLVfE/hqdefault.jpg"
+              alt="news-image"
+            />
+          </a>
+        </Paper>
+      </Grid>
+    );
+  });
 
   return (
     <Container sx={{ pt: 3 }} maxWidth="lg">

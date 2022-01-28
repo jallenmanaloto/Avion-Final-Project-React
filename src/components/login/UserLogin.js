@@ -172,7 +172,7 @@ const UserLogin = () => {
   };
 
   const handleSignUp = () => {
-    navigate("register");
+    navigate("/register");
   };
   //handling login on enter key
   const handleEnterKeyLogin = (e) => {
