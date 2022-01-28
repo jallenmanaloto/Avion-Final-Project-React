@@ -140,6 +140,7 @@ export const formStyle = makeStyles({
 export const landingStyle = makeStyles({
   root: {
     width: "100vw",
+    overflowX: "hidden",
   },
   affiliation: {
     display: "flex",
@@ -153,8 +154,12 @@ export const landingStyle = makeStyles({
     height: "70vh",
     width: "50vw",
   },
+  healthPassport: {
+    height: "70vh",
+    width: "50vw",
+  },
   firstPage: {
-    height: "100vh",
+    minHeight: "100vh",
   },
   navContainer: {
     display: "flex",
@@ -163,6 +168,14 @@ export const landingStyle = makeStyles({
     width: "100%",
     marginBottom: "2.6em",
     marginTop: "0.28rem",
+  },
+  secondPage: {
+    minHeight: "100vh",
+    width: "100vw",
+    overflowX: "hidden",
+    backgroundColor: "#f2f4f5",
+    display: "flex",
+    alignItems: "center",
   },
   summaryContainer: {
     width: "44vw",
