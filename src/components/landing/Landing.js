@@ -3,12 +3,14 @@ import { landingStyle } from "../styles/Styles";
 import { useNavigate } from "react-router-dom";
 import Container from "@mui/material/Container";
 import HeroFirst from "../../images/HeroFirst.svg";
+import HealthPassport from "../../images/HealthPassport.svg";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import Button from "@mui/material/Button";
 import LandingBrand from "../../images/LandingBrand.svg";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
+import Calendar from "../../images/Calendar.svg";
 
 const Landing = () => {
   let navigate = useNavigate();
@@ -108,7 +110,7 @@ const Landing = () => {
                 </Button>
               </div>
             </Grid>
-            <Grid item lg={6}>
+            <Grid item lg={4}>
               <img
                 className={classes.heroFirst}
                 src={HeroFirst}
@@ -117,8 +119,59 @@ const Landing = () => {
             </Grid>
           </Grid>
         </div>
-        <div></div>
       </Container>
+      <div className={classes.secondPage}>
+        <Container maxWidth="xl">
+          <Grid
+            sx={{ mt: 0 }}
+            container
+            justifyContent="space-between"
+            spacing={2}
+          >
+            <Grid item lg={3}>
+              <img
+                className={classes.healthPassport}
+                src={HealthPassport}
+                alt="image"
+              />
+            </Grid>
+            <Grid item lg={4}>
+              <Typography
+                sx={{
+                  color: "#3d3d3d",
+                  mt: 15,
+                  lineHeight: "3.1rem",
+                  fontWeight: "bold",
+                  width: "100%",
+                }}
+                variant="h4"
+              >
+                Access your health information anytime, anywhere using your QR
+                Code.
+              </Typography>
+              <Typography
+                sx={{ width: "90%", mt: 5, color: "#3d3d3d" }}
+                variant="h6"
+              >
+                Binary is tracking user's health information through its secured
+                database. Uploaded vaccination cards can be accessed through QR.
+              </Typography>
+            </Grid>
+          </Grid>
+        </Container>
+      </div>
+      {/* <div>
+        <Container maxWidth="xl">
+          <Grid container>
+            <Grid item lg={6}>
+              <Typography>Have control on your </Typography>
+            </Grid>
+          </Grid>
+          <Grid item={6}>
+            <img src={Calendar} alt="calendar" />
+          </Grid>
+        </Container>
+      </div> */}
     </div>
   );
 };
