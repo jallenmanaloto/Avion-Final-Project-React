@@ -174,6 +174,18 @@ const UserLogin = () => {
 
   return (
     <div>
+      <Link
+        sx={{
+          position: "absolute",
+          top: 30,
+          left: 40,
+          zIndex: 10,
+          fontSize: "1.2rem",
+        }}
+        href="/"
+      >
+        Go back home
+      </Link>
       <Grid container>
         <Grid container item sm={12} md={12} lg={12} xl={12}>
           <img className={imageStyle.root} src={Thermometer} alt="background" />
