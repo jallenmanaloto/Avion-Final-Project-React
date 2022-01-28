@@ -182,7 +182,7 @@ const UserLogin = () => {
           zIndex: 10,
           fontSize: "1.2rem",
         }}
-        href="/"
+        href="/binary"
       >
         Go back home
       </Link>
@@ -291,7 +291,7 @@ const UserLogin = () => {
                       Don't have an account yet?
                     </Typography>
                     <Link
-                      href="register"
+                      href="/register"
                       sx={{ cursor: "pointer", fontWeight: "500" }}
                       underline="hover"
                     >
