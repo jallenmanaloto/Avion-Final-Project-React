@@ -167,6 +167,13 @@ const UserLogin = () => {
       });
   };
 
+  const handleBackHome = () => {
+    navigate("/");
+  };
+
+  const handleSignUp = () => {
+    navigate("register");
+  };
   //handling login on enter key
   const handleEnterKeyLogin = (e) => {
     if (e.key === "Enter") handleLogin(e);
@@ -182,7 +189,7 @@ const UserLogin = () => {
           zIndex: 10,
           fontSize: "1.2rem",
         }}
-        href="/binary"
+        onClick={handleBackHome}
       >
         Go back home
       </Link>
@@ -291,7 +298,7 @@ const UserLogin = () => {
                       Don't have an account yet?
                     </Typography>
                     <Link
-                      href="/register"
+                      onClick={handleSignUp}
                       sx={{ cursor: "pointer", fontWeight: "500" }}
                       underline="hover"
                     >
