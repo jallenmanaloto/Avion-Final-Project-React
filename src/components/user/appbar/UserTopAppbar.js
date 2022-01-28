@@ -111,11 +111,11 @@ const UserTopAppbar = () => {
         elevation={0}
       >
         <Toolbar sx={{ p: 1 }}>
-          <img
+          {/* <img
             style={{ position: "absolute", top: -10 }}
             src={binary}
             alt="background-image"
-          />
+          /> */}
           <Container maxWidth="md">
             <Grid container item justifyContent="space-evenly" spacing={0}>
               <Grid item md={3}>
