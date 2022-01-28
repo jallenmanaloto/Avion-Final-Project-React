@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
+import { useNavigate } from "react-router-dom";
 import { formStyle } from "../styles/Styles";
 import Grid from "@mui/material/Grid";
 import Link from "@mui/material/Link";
@@ -73,6 +74,11 @@ const Registration = () => {
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter") handleRegister(e);
+  };
+
+  let navigate = useNavigate();
+  const handleLogin = () => {
+    navigate("/login");
   };
 
   return (
@@ -216,7 +222,7 @@ const Registration = () => {
                     Already got an account?
                   </Typography>
                   <Link
-                    href="login"
+                    onClick={handleLogin}
                     sx={{ cursor: "pointer", fontWeight: "500" }}
                     underline="hover"
                   >
