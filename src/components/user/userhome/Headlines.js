@@ -13,10 +13,11 @@ const Headlines = () => {
   useEffect(() => {
     axios({
       method: "GET",
-      url: "https://newsapi.org/v2/top-headlines?country=ph&category=health&apiKey=3fb6128935d7419c844a591469e9c2f1",
+      url: "https://gnews.io/api/v4/search?q=ph&token=dda56b5e65c3a2247ddff00cc83d0283",
     })
       .then((res) => {
         setHeadline(res.data.articles);
+        console.log(res);
       })
       .catch((err) => console.log(err));
   }, []);
@@ -48,7 +49,7 @@ const Headlines = () => {
                 objectFit: "cover",
                 transform: "translateX(-50%)",
               }}
-              src="https://i.ytimg.com/vi/Qn3twxXLVfE/hqdefault.jpg"
+              src={article.image}
               alt="news-image"
             />
           </a>
