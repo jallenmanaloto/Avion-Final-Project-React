@@ -93,7 +93,8 @@ const Landing = () => {
                   variant="h6"
                 >
                   Health app that provides a full-range of online services to
-                  ensure that each indivual are given the most quality of care.
+                  ensure that each individual are given the most quality of
+                  care.
                 </Typography>
                 <Button
                   sx={{
