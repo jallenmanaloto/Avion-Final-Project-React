@@ -188,6 +188,7 @@ const UserLogin = () => {
           left: 40,
           zIndex: 10,
           fontSize: "1.2rem",
+          cursor: "pointer",
         }}
         onClick={handleBackHome}
       >
